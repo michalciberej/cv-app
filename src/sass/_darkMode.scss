@@ -1,15 +1,94 @@
 @import "./config";
 
-body {
-  transition: all 0.3s ease-in-out;
+* {
+  transition: color 0.3s ease-in-out;
 }
 
 body[data-theme="dark"] {
   background-color: $blackClrOne;
   color: $whiteClrOne;
+
+  #inputContainer {
+    background-color: $blackClrTwo;
+
+    .contentContainer {
+      background-color: $blackClrThr;
+
+      #personInfoContainer {
+        label {
+          background-color: $blackClrTwo;
+
+          svg {
+            fill: $whiteClrOne;
+          }
+        }
+      }
+
+      label:hover {
+        box-shadow: inset 0 0 5px $whiteClrTwo;
+      }
+
+      input {
+        background-color: $blackClrTwo;
+        color: $whiteClrOne;
+      }
+
+      input:focus {
+        box-shadow: inset 0 0 5px $whiteClrTwo;
+      }
+
+      textarea {
+        background-color: $blackClrTwo;
+        color: $whiteClrOne;
+      }
+
+      textarea:focus {
+        box-shadow: inset 0 0 5px $whiteClrTwo;
+      }
+    }
+  }
 }
 
 body[data-theme="light"] {
   background-color: $whiteClrOne;
   color: $blackClrOne;
+
+  #inputContainer {
+    background-color: $whiteClrThr;
+    .contentContainer {
+      background-color: $whiteClrTwo;
+
+      #personInfoContainer {
+        label {
+          background-color: $whiteClrOne;
+
+          svg {
+            fill: $blackClrOne;
+          }
+        }
+      }
+
+      label:hover {
+        box-shadow: inset 0 0 5px $blackClrTwo;
+      }
+
+      input {
+        background-color: $whiteClrOne;
+        color: $blackClrOne;
+      }
+
+      input:focus {
+        box-shadow: inset 0 0 5px $blackClrTwo;
+      }
+
+      textarea {
+        background-color: $whiteClrOne;
+        color: $blackClrOne;
+      }
+
+      textarea:focus {
+        box-shadow: inset 0 0 5px $blackClrTwo;
+      }
+    }
+  }
 }
