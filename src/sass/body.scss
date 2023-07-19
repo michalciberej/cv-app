@@ -7,7 +7,7 @@ body {
 
 #mainContainer {
   display: flex;
-  gap: 6rem;
+  gap: 3rem;
 
   #inputContainer {
     padding: 1rem;
@@ -23,12 +23,12 @@ body {
       border-radius: 0.5rem;
       padding: 1rem;
       margin-bottom: 1rem;
-      box-shadow: 0 0 10px 0px $blackClrOne;
     }
   }
 
   #outputContainer {
     width: 100%;
     background-color: $blueClr;
+    border-radius: 1rem;
   }
 }
