@@ -1,0 +1,21 @@
+@import "./config";
+@import "./darkMode";
+
+#header {
+  display: flex;
+  justify-content: end;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+
+  svg {
+    fill: $orangeClr;
+    width: 2rem;
+    height: auto;
+    transition: all 0.6s ease;
+  }
+
+  svg:hover {
+    fill: $redClr;
+    transform: rotate(180deg);
+  }
+}

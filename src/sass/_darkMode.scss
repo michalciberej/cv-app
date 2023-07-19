@@ -1,0 +1,15 @@
+@import "./config";
+
+body {
+  transition: all 0.3s ease-in-out;
+}
+
+body[data-theme="dark"] {
+  background-color: $blackClrOne;
+  color: $whiteClrOne;
+}
+
+body[data-theme="light"] {
+  background-color: $whiteClrOne;
+  color: $blackClrOne;
+}
