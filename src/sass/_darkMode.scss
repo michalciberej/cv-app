@@ -5,8 +5,13 @@
 }
 
 body[data-theme="dark"] {
-  background-color: $blackClrOne;
+  background-color: $blackClrTwo;
   color: $whiteClrOne;
+
+  .contentContainer {
+    background-color: $blackClrThr;
+    box-shadow: 0 0 10px 0px $blackClrOne;
+  }
 
   #inputContainer {
     background-color: $blackClrTwo;
@@ -93,6 +98,14 @@ body[data-theme="dark"] {
           background-color: darken($blackClrTwo, 10%);
         }
       }
+    }
+  }
+  #outputContainer {
+    background-color: $blackClrThr;
+    box-shadow: 0 0 10px 0 $blackClrOne;
+
+    #cvContainer {
+      box-shadow: 0 0 10px 0 $blackClrOne;
     }
   }
 }

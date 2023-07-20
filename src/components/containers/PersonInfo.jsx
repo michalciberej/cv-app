@@ -1,4 +1,6 @@
 import "../../sass/personInfo.scss";
+import Icon from "@mdi/react";
+import { mdiUpload } from "@mdi/js";
 
 function PersonInfo() {
   return (
@@ -7,10 +9,7 @@ function PersonInfo() {
       <input type="text" placeholder="Name" />
       <input type="text" placeholder="Title"></input>
       <label htmlFor="photoUpload">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <title>upload</title>
-          <path d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z" />
-        </svg>
+        <Icon path={mdiUpload} size={1.3} />
         Photo
         <input id="photoUpload" type="file"></input>
       </label>
