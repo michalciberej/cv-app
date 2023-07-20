@@ -59,6 +59,40 @@ body[data-theme="dark"] {
           background-color: darken($blackClrTwo, 10%);
         }
       }
+      #experienceContainer {
+        button {
+          background-color: $blackClrOne;
+          color: $whiteClrOne;
+        }
+        button:hover {
+          background-color: darken($blackClrTwo, 10%);
+        }
+        button:focus {
+          background-color: darken($blackClrTwo, 10%);
+        }
+      }
+
+      #skillsContainer {
+        button {
+          background-color: $blackClrOne;
+          color: $whiteClrOne;
+        }
+
+        .trashBtn:hover {
+          color: $redClr;
+        }
+
+        .trashBtn:focus {
+          color: $redClr;
+        }
+
+        button:hover {
+          background-color: darken($blackClrTwo, 10%);
+        }
+        button:focus {
+          background-color: darken($blackClrTwo, 10%);
+        }
+      }
     }
   }
 }
@@ -110,6 +144,40 @@ body[data-theme="light"] {
           background-color: $whiteClrThr;
           color: $blackClrOne;
         }
+        button:hover {
+          background-color: darken($whiteClrThr, 10%);
+        }
+        button:focus {
+          background-color: darken($whiteClrThr, 10%);
+        }
+      }
+      #experienceContainer {
+        button {
+          background-color: $whiteClrThr;
+          color: $blackClrOne;
+        }
+        button:hover {
+          background-color: darken($whiteClrThr, 10%);
+        }
+        button:focus {
+          background-color: darken($whiteClrThr, 10%);
+        }
+      }
+
+      #skillsContainer {
+        button {
+          background-color: $whiteClrThr;
+          color: $blackClrOne;
+        }
+
+        .trashBtn:hover {
+          color: $redClr;
+        }
+
+        .trashBtn:focus {
+          color: $redClr;
+        }
+
         button:hover {
           background-color: darken($whiteClrThr, 10%);
         }

@@ -13,9 +13,12 @@ body {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
+    max-height: 90vh;
     border-radius: 1rem;
     overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     .contentContainer {
       display: flex;
@@ -25,10 +28,25 @@ body {
       margin-bottom: 1rem;
     }
   }
-
+  #inputContainer::-webkit-scrollbar {
+    display: none;
+  }
   #outputContainer {
+    max-height: 91vh;
     width: 100%;
-    background-color: $blueClr;
+    background-color: $blackClrTwo;
     border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    #cvContainer {
+      background-color: white;
+      width: 50%;
+      height: 95%;
+      box-shadow: 0 0 10px 0 $blackClrOne;
+      border-radius: 0.5rem;
+    }
   }
 }

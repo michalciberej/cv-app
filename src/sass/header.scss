@@ -5,6 +5,7 @@
   display: flex;
   justify-content: end;
   padding: 0.5rem 0;
+  margin-bottom: 1rem;
 
   svg {
     fill: $orangeClr;
@@ -14,7 +15,6 @@
   }
 
   svg:hover {
-    fill: $redClr;
     transform: rotate(180deg);
   }
 }
