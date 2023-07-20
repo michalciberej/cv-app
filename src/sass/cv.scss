@@ -35,10 +35,105 @@
   #cvSidebar {
     background-color: $blackClrTwo;
     grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
 
     img {
       width: 100%;
       height: 250px;
+    }
+
+    .contactsContainer {
+      display: grid;
+      grid-column: 2rem calc(100% - 2rem);
+      grid-row: 1fr 1fr;
+      margin-top: 0.8rem;
+
+      .block {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 80%;
+        width: 100%;
+        background-color: #fbbf24;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        color: $blackClrOne;
+        padding-right: 0.5rem;
+      }
+      .contactsHeading {
+        width: 100%;
+        background-color: $blackClrThr;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        padding-left: 0.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.3rem;
+      }
+      .contactsData {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  #mainCvContainer {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: $blackClrOne;
+    padding: 3rem 2rem;
+
+    #aboutmeContainer {
+      font-family: Roboto;
+
+      h3::after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid $blackClrThr;
+        margin-bottom: 1rem;
+      }
+
+      span {
+        margin: 1rem 0;
+        font-size: 0.8rem;
+      }
+    }
+
+    #cvExperienceContainer {
+      margin-top: 1rem;
+
+      h3::after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid $blackClrThr;
+        margin-bottom: 1rem;
+      }
+      .work {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 2rem 2rem 5rem;
+
+        .date {
+          grid-column: 1/2;
+          grid-row: 1/3;
+        }
+        .position {
+          grid-column: 2/3;
+          grid-row: 1/2;
+        }
+        .employer {
+          grid-column: 2/3;
+          grid-row: 2/3;
+        }
+        .jobDescription {
+          grid-column: 2/3;
+          grid-row: 3/4;
+          font-size: 0.8rem;
+        }
+      }
     }
   }
 }
