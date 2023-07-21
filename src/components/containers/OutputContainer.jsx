@@ -19,6 +19,7 @@ function OutputContainer() {
             <Cvexperience />
           </div>
           <div id="cvEducationContainer">
+            <h3>Education</h3>
             <Cveducation />
           </div>
         </div>

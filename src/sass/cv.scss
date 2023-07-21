@@ -148,8 +148,8 @@
 
         .date {
           grid-column: 1/2;
-          font-size: 0.8rem;
           grid-row: 1/3;
+          font-size: 0.8rem;
         }
         .position {
           grid-column: 2/3;
@@ -166,6 +166,32 @@
           grid-row: 3/4;
           font-size: 0.8rem;
         }
+      }
+    }
+
+    #cvEducationContainer {
+      .education {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-row: 2rem 2rem;
+      }
+
+      h3::after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid $blackClrThr;
+        margin-bottom: 1rem;
+      }
+      .date {
+        font-size: 0.8rem;
+      }
+      .major {
+        font-size: 0.9rem;
+      }
+      .school {
+        grid-column: 2/3;
+        font-size: 0.9rem;
       }
     }
   }
