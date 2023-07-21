@@ -1,9 +1,12 @@
-function Cveducation() {
+/* eslint-disable react/prop-types */
+function Cveducation({ education }) {
   return (
     <div className="education">
-      <span className="date">2021 - 2022</span>
-      <span className="major">Major</span>
-      <span className="school">School Lorem 123</span>
+      <span className="date">
+        {education.from} - {education.to}
+      </span>
+      <span className="major">{education.major}</span>
+      <span className="school">{education.school}</span>
     </div>
   );
 }

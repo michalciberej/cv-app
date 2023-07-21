@@ -8,25 +8,46 @@ import uuid from "react-uuid";
 
 function InputContainer(props) {
   const { skills, setSkills } = props;
+  const { education, setEducation } = props;
+
   return (
     <div id="inputContainer">
       <div className="contentContainer">
         <PersonInfo {...props} />
       </div>
       <div className="contentContainer">
-        <div id="educationContainer">
-          <h2>Education</h2>
-          <Education />
-          <button type="button" className="addBtn" id="eduBtn">
+        <div id="experienceContainer">
+          <h2>Experience</h2>
+          <Experience />
+          <button type="button" className="addBtn" id="expBtn">
             Add
           </button>
         </div>
       </div>
       <div className="contentContainer">
-        <div id="experienceContainer">
-          <h2>Experience</h2>
-          <Experience />
-          <button type="button" className="addBtn" id="expBtn">
+        <div id="educationContainer">
+          <h2>Education</h2>
+          {education.map((obj) => (
+            <Education {...props} key={obj.id} id={obj.id} />
+          ))}
+          <button
+            type="button"
+            className="addBtn"
+            id="eduBtn"
+            onClick={() =>
+              education.length < 3
+                ? setEducation(
+                    education.concat({
+                      date: "",
+                      position: "",
+                      employer: "",
+                      jobDescription: "",
+                      id: uuid(),
+                    })
+                  )
+                : null
+            }
+          >
             Add
           </button>
         </div>
@@ -46,7 +67,11 @@ function InputContainer(props) {
           <button
             type="button"
             className="addBtn"
-            onClick={() => setSkills(skills.concat({ skill: "", id: uuid() }))}
+            onClick={() =>
+              skills.length < 8
+                ? setSkills(skills.concat({ skill: "", id: uuid() }))
+                : null
+            }
           >
             Add
           </button>

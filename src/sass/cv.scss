@@ -45,7 +45,7 @@
 
     .contactsContainer {
       display: grid;
-      grid-column: auto calc(100% - auto);
+      grid-template-columns: 20%;
       grid-row: 1fr 1fr;
       margin-top: 0.8rem;
 
@@ -59,7 +59,7 @@
         justify-content: end;
         align-items: center;
         color: $blackClrOne;
-        padding-right: 0.5rem;
+        padding-right: 0.4rem;
       }
       .contactsHeading {
         width: 100%;
@@ -74,8 +74,8 @@
       .contactsData {
         grid-row: 2/3;
         grid-column: 2/3;
-        padding-left: 0.5rem;
         font-size: 0.9rem;
+        padding-left: 0.5rem;
       }
     }
     #cvSkillsContainer {

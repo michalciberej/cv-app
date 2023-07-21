@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../../sass/cv.scss";
 
 function Cvskills({ skills }) {

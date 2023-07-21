@@ -4,14 +4,14 @@ import Icon from "@mdi/react";
 import { mdiTrashCanOutline } from "@mdi/js";
 
 function Skills({ skills, setSkill, id, arr }) {
-  const handleBtnClick = () => setSkill(arr.filter((a) => a.id !== id));
+  const handleBtnClick = () => setSkill(arr.filter((obj) => obj.id !== id));
 
   const handleInput = (e) => {
-    const newSkill = arr.map((x) => {
-      if (x.id === id) {
-        return { ...x, skill: e.target.value };
+    const newSkill = arr.map((obj) => {
+      if (obj.id === id) {
+        return { ...obj, skill: e.target.value };
       }
-      return x;
+      return obj;
     });
     setSkill(newSkill);
   };

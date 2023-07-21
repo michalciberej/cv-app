@@ -19,6 +19,23 @@ function Main() {
     { skill: "HTML", id: uuid() },
     { skill: "CSS", id: uuid() },
   ]);
+  // const [experience, setExperience] = useState([
+  //   {
+  //     date: "",
+  //     position: "",
+  //     employer: "",
+  //     jobDescription: "",
+  //     id: uuid(),
+  //   },
+  // ]);
+  const [education, setEducation] = useState([
+    {
+      date: "",
+      Major: "",
+      school: "",
+      id: uuid(),
+    },
+  ]);
 
   return (
     <div id="mainContainer">
@@ -36,6 +53,8 @@ function Main() {
         setPhoto={setPhoto}
         skills={skills}
         setSkills={setSkills}
+        education={education}
+        setEducation={setEducation}
       />
       <OutputContainer
         name={name}
@@ -47,6 +66,7 @@ function Main() {
         descriptionP={descriptionP}
         photo={photo}
         skills={skills}
+        education={education}
       />
     </div>
   );

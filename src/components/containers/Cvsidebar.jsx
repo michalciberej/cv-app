@@ -7,10 +7,18 @@ function Cvsidebar({ photo, number, email, website, address, skills }) {
   return (
     <div id="cvSidebar">
       <img src={photo}></img>
-      <Contacts heading="Phone" icon={mdiPhone} data={number} />
-      <Contacts heading="Email" icon={mdiEmail} data={email} />
-      <Contacts heading="Website" icon={mdiEarth} data={website} />
-      <Contacts heading="Address" icon={mdiHomeAccount} data={address} />
+      {number != "" ? (
+        <Contacts heading="Phone" icon={mdiPhone} data={number} />
+      ) : null}
+      {email != "" ? (
+        <Contacts heading="Email" icon={mdiEmail} data={email} />
+      ) : null}
+      {website != "" ? (
+        <Contacts heading="Website" icon={mdiEarth} data={website} />
+      ) : null}
+      {address != "" ? (
+        <Contacts heading="Address" icon={mdiHomeAccount} data={address} />
+      ) : null}
       <Cvskills skills={skills} />
     </div>
   );

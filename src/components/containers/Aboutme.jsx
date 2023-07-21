@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function Aboutme({ descriptionP }) {
   return (
     <div id="aboutmeContainer">

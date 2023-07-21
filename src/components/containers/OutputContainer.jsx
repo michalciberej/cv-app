@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Cvheader from "./Cvheader";
 import Cvsidebar from "./Cvsidebar";
 import "../../sass/cv.scss";
@@ -6,21 +7,23 @@ import Cvexperience from "./Cvexperience";
 import Cveducation from "./Cveducation";
 
 function OutputContainer(props) {
+  const { education, descriptionP } = props;
   return (
     <div id="outputContainer">
       <div id="cvContainer">
         <Cvheader {...props} />
         <Cvsidebar {...props} />
         <div id="mainCvContainer">
-          <Aboutme {...props} />
+          {descriptionP != "" ? <Aboutme {...props} /> : null}
           <div id="cvExperienceContainer">
             <h3>Work experience</h3>
-            <Cvexperience />
             <Cvexperience />
           </div>
           <div id="cvEducationContainer">
             <h3>Education</h3>
-            <Cveducation />
+            {education.map((obj) => (
+              <Cveducation education={obj} key={obj.id} />
+            ))}
           </div>
         </div>
       </div>
