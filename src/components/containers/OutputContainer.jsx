@@ -5,14 +5,14 @@ import Aboutme from "./Aboutme";
 import Cvexperience from "./Cvexperience";
 import Cveducation from "./Cveducation";
 
-function OutputContainer() {
+function OutputContainer(props) {
   return (
     <div id="outputContainer">
       <div id="cvContainer">
-        <Cvheader />
-        <Cvsidebar />
+        <Cvheader {...props} />
+        <Cvsidebar {...props} />
         <div id="mainCvContainer">
-          <Aboutme />
+          <Aboutme {...props} />
           <div id="cvExperienceContainer">
             <h3>Work experience</h3>
             <Cvexperience />

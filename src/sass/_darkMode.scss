@@ -6,11 +6,11 @@
 
 body[data-theme="dark"] {
   background-color: $blackClrTwo;
-  color: $whiteClrOne;
 
   .contentContainer {
     background-color: $blackClrThr;
     box-shadow: 0 0 10px 0px $blackClrOne;
+    color: $whiteClrOne;
   }
 
   #inputContainer {
@@ -19,7 +19,7 @@ body[data-theme="dark"] {
     .contentContainer {
       background-color: $blackClrThr;
       box-shadow: 0 0 10px 0px $blackClrOne;
-
+      color: $whiteClrOne;
       #personInfoContainer {
         label {
           background-color: $blackClrTwo;
@@ -106,20 +106,34 @@ body[data-theme="dark"] {
 
     #cvContainer {
       box-shadow: 0 0 10px 0 $blackClrOne;
+      #cvSidebar {
+        .contactsContainer {
+          color: $whiteClrOne;
+        }
+      }
+      #cvSkillsContainer {
+        ul {
+          li {
+            color: $whiteClrOne;
+          }
+        }
+      }
     }
   }
 }
-
 body[data-theme="light"] {
   background-color: $whiteClrOne;
-  color: $blackClrOne;
 
+  .contentContainer {
+    background-color: $whiteClrTwo;
+    box-shadow: 0 0 10px 0px $blackClrOne;
+  }
   #inputContainer {
-    background-color: $whiteClrThr;
+    background-color: $whiteClrOne;
 
     .contentContainer {
       background-color: $whiteClrTwo;
-      box-shadow: 0 0 10px 0px $whiteClrOne;
+      box-shadow: 0 0 10px 0px $blackClrOne;
 
       #personInfoContainer {
         label {
@@ -196,6 +210,25 @@ body[data-theme="light"] {
         }
         button:focus {
           background-color: darken($whiteClrThr, 10%);
+        }
+      }
+    }
+  }
+  #outputContainer {
+    background-color: $whiteClrTwo;
+    box-shadow: 0 0 10px 0 $blackClrOne;
+    #cvContainer {
+      box-shadow: 0 0 10px 0 $blackClrOne;
+      #cvSidebar {
+        .contactsContainer {
+          color: $whiteClrOne;
+        }
+      }
+      #cvSkillsContainer {
+        ul {
+          li {
+            color: $whiteClrOne;
+          }
         }
       }
     }

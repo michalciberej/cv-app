@@ -1,10 +1,10 @@
 import "../../sass/cv.scss";
 
-function Cvheader() {
+function Cvheader({ name, title }) {
   return (
     <div id="cvHeader">
-      <span id="name">MICHAL CIBEREJ</span>
-      <span id="title">SOFTWARE ENGINEER</span>
+      <span id="name">{name}</span>
+      <span id="title">{title}</span>
     </div>
   );
 }

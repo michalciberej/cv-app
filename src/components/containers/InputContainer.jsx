@@ -4,11 +4,11 @@ import "../../sass/body.scss";
 import Experience from "./Experience";
 import Skills from "./Skills";
 
-function InputContainer() {
+function InputContainer(props) {
   return (
     <div id="inputContainer">
       <div className="contentContainer">
-        <PersonInfo />
+        <PersonInfo {...props} />
       </div>
       <div className="contentContainer">
         <div id="educationContainer">
