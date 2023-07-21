@@ -1,5 +1,6 @@
 import Contacts from "./Contacts";
 import { mdiPhone, mdiEmail, mdiEarth, mdiHomeAccount } from "@mdi/js";
+import Cvskills from "./Cvskills";
 
 function Cvsidebar() {
   return (
@@ -9,6 +10,7 @@ function Cvsidebar() {
       <Contacts heading="Email" icon={mdiEmail} />
       <Contacts heading="Website" icon={mdiEarth} />
       <Contacts heading="Address" icon={mdiHomeAccount} />
+      <Cvskills />
     </div>
   );
 }

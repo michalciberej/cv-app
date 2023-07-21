@@ -13,9 +13,10 @@ function PersonInfo() {
         Photo
         <input id="photoUpload" type="file"></input>
       </label>
-      <input type="text" placeholder="Address"></input>
-      <input type="text" placeholder="Phone number"></input>
       <input type="text" placeholder="Email"></input>
+      <input type="text" placeholder="Phone number"></input>
+      <input type="text" placeholder="Website"></input>
+      <input type="text" placeholder="Address"></input>
       <textarea type="text" placeholder="Description"></textarea>
     </form>
   );

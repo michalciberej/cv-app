@@ -1,5 +1,6 @@
 import Icon from "@mdi/react";
 
+// eslint-disable-next-line react/prop-types
 function Contacts({ heading, icon }) {
   return (
     <div className="contactsContainer">
