@@ -1,8 +1,21 @@
 import "../../sass/header.scss";
 import Icon from "@mdi/react";
 import { mdiWeatherSunny } from "@mdi/js";
+import { jsPDF } from "jspdf";
 
 function Header() {
+  const pdf = new jsPDF("p", "px", [586.667, 807.783]);
+
+  const convertPdf = () => {
+    pdf.html(document.querySelector("#cvContainer"), {
+      callback: function (pdf) {
+        pdf.save();
+      },
+      width: 701,
+    });
+    pdf.scale(0.1);
+  };
+
   const setDarkMode = () => {
     document.querySelector("body").setAttribute("data-theme", "dark");
     localStorage.setItem("selectedTheme", "dark");
@@ -30,7 +43,9 @@ function Header() {
   return (
     <div id="header">
       <h1>CV Creator</h1>
-      <button type="button">Convert to PDF</button>
+      <button type="button" onClick={convertPdf}>
+        Convert to PDF
+      </button>
       <Icon path={mdiWeatherSunny} size={1.4} onClick={toggleTheme} />
     </div>
   );
