@@ -9,7 +9,7 @@ import uuid from "react-uuid";
 function InputContainer(props) {
   const { skills, setSkills } = props;
   const { education, setEducation } = props;
-
+  const { experience, setExperience } = props;
   return (
     <div id="inputContainer">
       <div className="contentContainer">
@@ -18,8 +18,28 @@ function InputContainer(props) {
       <div className="contentContainer">
         <div id="experienceContainer">
           <h2>Experience</h2>
-          <Experience />
-          <button type="button" className="addBtn" id="expBtn">
+          {experience.map((obj) => (
+            <Experience {...props} key={obj.id} id={obj.id} />
+          ))}
+          <button
+            type="button"
+            className="addBtn"
+            id="expBtn"
+            onClick={() => {
+              experience.length < 3
+                ? setExperience(
+                    experience.concat({
+                      from: "",
+                      to: "",
+                      position: "",
+                      company: "",
+                      jobDescription: "",
+                      id: uuid(),
+                    })
+                  )
+                : null;
+            }}
+          >
             Add
           </button>
         </div>
@@ -38,10 +58,10 @@ function InputContainer(props) {
               education.length < 3
                 ? setEducation(
                     education.concat({
-                      date: "",
-                      position: "",
-                      employer: "",
-                      jobDescription: "",
+                      from: "",
+                      to: "",
+                      Major: "",
+                      school: "",
                       id: uuid(),
                     })
                   )

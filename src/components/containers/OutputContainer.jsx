@@ -7,7 +7,7 @@ import Cvexperience from "./Cvexperience";
 import Cveducation from "./Cveducation";
 
 function OutputContainer(props) {
-  const { education, descriptionP } = props;
+  const { education, descriptionP, experience } = props;
   return (
     <div id="outputContainer">
       <div id="cvContainer">
@@ -17,7 +17,9 @@ function OutputContainer(props) {
           {descriptionP != "" ? <Aboutme {...props} /> : null}
           <div id="cvExperienceContainer">
             <h3>Work experience</h3>
-            <Cvexperience />
+            {experience.map((obj) => (
+              <Cvexperience experience={obj} key={obj.id} />
+            ))}
           </div>
           <div id="cvEducationContainer">
             <h3>Education</h3>

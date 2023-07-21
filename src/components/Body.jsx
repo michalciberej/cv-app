@@ -19,15 +19,16 @@ function Main() {
     { skill: "HTML", id: uuid() },
     { skill: "CSS", id: uuid() },
   ]);
-  // const [experience, setExperience] = useState([
-  //   {
-  //     date: "",
-  //     position: "",
-  //     employer: "",
-  //     jobDescription: "",
-  //     id: uuid(),
-  //   },
-  // ]);
+  const [experience, setExperience] = useState([
+    {
+      from: "",
+      to: "",
+      position: "",
+      company: "",
+      jobDescription: "",
+      id: uuid(),
+    },
+  ]);
   const [education, setEducation] = useState([
     {
       date: "",
@@ -55,6 +56,8 @@ function Main() {
         setSkills={setSkills}
         education={education}
         setEducation={setEducation}
+        experience={experience}
+        setExperience={setExperience}
       />
       <OutputContainer
         name={name}
@@ -67,6 +70,7 @@ function Main() {
         photo={photo}
         skills={skills}
         education={education}
+        experience={experience}
       />
     </div>
   );

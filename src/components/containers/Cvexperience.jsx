@@ -1,13 +1,13 @@
-function Cvexperience() {
+/* eslint-disable react/prop-types */
+function Cvexperience({ experience }) {
   return (
     <div className="work">
-      <span className="date">2021 - 2022</span>
-      <span className="position">Frontend Software Developer</span>
-      <span className="eployer">Google inc.</span>
-      <span className="jobDescription">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui dolorum
-        reprehenderit dolor voluptate porro saepe!
+      <span className="date">
+        {experience.from} - {experience.to}
       </span>
+      <span className="position">{experience.position}</span>
+      <span className="eployer">{experience.company}</span>
+      <span className="jobDescription">{experience.jobDescription}</span>
     </div>
   );
 }
