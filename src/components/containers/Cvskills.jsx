@@ -1,13 +1,13 @@
 import "../../sass/cv.scss";
 
-function Cvskills() {
+function Cvskills({ skills }) {
   return (
     <div id="cvSkillsContainer">
       <h3>Skills</h3>
       <ul>
-        <li>Java Script</li>
-        <li>Sass</li>
-        <li>Vite</li>
+        {skills.map((skill) => (
+          <li key={skill.id}>{skill.skill}</li>
+        ))}
       </ul>
     </div>
   );

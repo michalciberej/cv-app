@@ -1,10 +1,13 @@
+/* eslint-disable react/prop-types */
 import PersonInfo from "./PersonInfo";
 import Education from "./Education";
 import "../../sass/body.scss";
 import Experience from "./Experience";
 import Skills from "./Skills";
+import uuid from "react-uuid";
 
 function InputContainer(props) {
+  const { skills, setSkills } = props;
   return (
     <div id="inputContainer">
       <div className="contentContainer">
@@ -31,7 +34,22 @@ function InputContainer(props) {
       <div className="contentContainer">
         <div id="skillsContainer">
           <h2>Skills</h2>
-          <Skills />
+          {skills.map((obj) => (
+            <Skills
+              key={obj.id}
+              setSkill={setSkills}
+              skills={obj.skill}
+              id={obj.id}
+              arr={skills}
+            />
+          ))}
+          <button
+            type="button"
+            className="addBtn"
+            onClick={() => setSkills(skills.concat({ skill: "", id: uuid() }))}
+          >
+            Add
+          </button>
         </div>
       </div>
     </div>

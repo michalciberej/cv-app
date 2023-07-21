@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import InputContainer from "./containers/InputContainer";
 import OutputContainer from "./containers/OutputContainer";
 import Header from "./containers/Header";
+import uuid from "react-uuid";
 import "../sass/body.scss";
 
 function Main() {
@@ -13,6 +14,12 @@ function Main() {
   const [address, setAddress] = useState("");
   const [descriptionP, setDescriptionP] = useState("");
   const [photo, setPhoto] = useState("");
+  const [skills, setSkills] = useState([
+    { skill: "Java", id: uuid() },
+    { skill: "HTML", id: uuid() },
+    { skill: "CSS", id: uuid() },
+  ]);
+
   return (
     <div id="mainContainer">
       <div className="contentContainer">
@@ -27,6 +34,8 @@ function Main() {
         setAddress={setAddress}
         setDescriptionP={setDescriptionP}
         setPhoto={setPhoto}
+        skills={skills}
+        setSkills={setSkills}
       />
       <OutputContainer
         name={name}
@@ -37,6 +46,7 @@ function Main() {
         address={address}
         descriptionP={descriptionP}
         photo={photo}
+        skills={skills}
       />
     </div>
   );

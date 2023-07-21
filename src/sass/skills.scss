@@ -1,31 +1,35 @@
 @import "./config";
 
 #skillsContainer {
-  display: grid;
-  grid-template-columns: 1fr 3rem;
-  grid-template-rows: repeat(auto-fit, minmax(2rem, 1fr));
-  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
 
   h2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     grid-column: 1/3;
   }
 
-  input {
-    grid-column: 1/2;
-  }
+  .skill {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 2rem;
+    margin-bottom: 0.5rem;
 
-  .trashBtn {
-    grid-column: 2/3;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.2s ease;
-    outline: none;
+    input {
+      grid-column: 1/2;
+    }
+    .trashBtn {
+      grid-column: 2/3;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.2s ease;
+      outline: none;
+    }
   }
 
   .addBtn {
