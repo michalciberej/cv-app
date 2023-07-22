@@ -31,4 +31,10 @@
     background-color: $blueClr;
     color: $whiteClrOne;
   }
+  button:hover {
+    background-color: darken($blueClr, 5);
+  }
+  button:focus {
+    background-color: darken($blueClr, 5);
+  }
 }

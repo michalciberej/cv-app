@@ -2,7 +2,6 @@ import { useState } from "react";
 import InputContainer from "./containers/InputContainer";
 import OutputContainer from "./containers/OutputContainer";
 import Header from "./containers/Header";
-import uuid from "react-uuid";
 import "../sass/body.scss";
 
 function Main() {
@@ -14,29 +13,9 @@ function Main() {
   const [address, setAddress] = useState("");
   const [descriptionP, setDescriptionP] = useState("");
   const [photo, setPhoto] = useState("");
-  const [skills, setSkills] = useState([
-    { skill: "Java", id: uuid() },
-    { skill: "HTML", id: uuid() },
-    { skill: "CSS", id: uuid() },
-  ]);
-  const [experience, setExperience] = useState([
-    {
-      from: "",
-      to: "",
-      position: "",
-      company: "",
-      jobDescription: "",
-      id: uuid(),
-    },
-  ]);
-  const [education, setEducation] = useState([
-    {
-      date: "",
-      Major: "",
-      school: "",
-      id: uuid(),
-    },
-  ]);
+  const [skills, setSkills] = useState([]);
+  const [experience, setExperience] = useState([]);
+  const [education, setEducation] = useState([]);
 
   return (
     <div id="mainContainer">

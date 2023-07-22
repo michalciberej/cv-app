@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
+import "../../sass/body.scss";
 import PersonInfo from "./PersonInfo";
 import Education from "./Education";
-import "../../sass/body.scss";
 import Experience from "./Experience";
 import Skills from "./Skills";
 import uuid from "react-uuid";

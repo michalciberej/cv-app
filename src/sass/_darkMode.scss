@@ -31,25 +31,31 @@ body[data-theme="dark"] {
       }
 
       label:hover {
-        box-shadow: inset 0 0 5px $whiteClrTwo;
+        color: $whiteClrOne;
+        background-color: darken($blackClrThr, 5);
+        box-shadow: inset 0 0 3px $whiteClrTwo;
       }
 
       input {
         background-color: $blackClrTwo;
-        color: $whiteClrOne;
+        color: $whiteClrThr;
       }
 
       input:focus {
-        box-shadow: inset 0 0 5px $whiteClrTwo;
+        color: $whiteClrOne;
+        background-color: darken($blackClrThr, 5);
+        box-shadow: inset 0 0 1px $whiteClrTwo;
       }
 
       textarea {
         background-color: $blackClrTwo;
-        color: $whiteClrOne;
+        color: $whiteClrThr;
       }
 
       textarea:focus {
-        box-shadow: inset 0 0 5px $whiteClrTwo;
+        color: $whiteClrOne;
+        background-color: darken($blackClrThr, 5);
+        box-shadow: inset 0 0 1px $whiteClrTwo;
       }
 
       #educationContainer {
@@ -151,10 +157,11 @@ body[data-theme="light"] {
 
       input {
         background-color: $whiteClrOne;
-        color: $blackClrOne;
+        color: $blackClrThr;
       }
 
       input:focus {
+        color: $blackClrOne;
         box-shadow: inset 0 0 5px $blackClrTwo;
       }
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../../sass/personInfo.scss";
 import Icon from "@mdi/react";
 import { mdiUpload } from "@mdi/js";
@@ -12,18 +13,22 @@ function PersonInfo({
   setAddress,
   setDescriptionP,
 }) {
+  const handleFileChange = (e) => {
+    if (e.target.file);
+  };
+
   return (
     <form method="#" action="#" id="personInfoContainer">
       <h2>Personal Information</h2>
       <input
         type="text"
         placeholder="Name"
-        onChange={(e) => setName(e.target.value)}
+        onChange={(e) => setName(e.target.value.toUpperCase())}
       ></input>
       <input
         type="text"
         placeholder="Title"
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={(e) => setTitle(e.target.value.toUpperCase())}
       ></input>
       <label htmlFor="photoUpload">
         <Icon path={mdiUpload} size={1.3} />
@@ -31,7 +36,10 @@ function PersonInfo({
         <input
           id="photoUpload"
           type="file"
-          onChange={(e) => setPhoto(e.target.files[0])}
+          accept="image/jpg, image/jpeg, image/png"
+          onChange={(e) => {
+            setPhoto(URL.createObjectURL(e.target.files[0]));
+          }}
         ></input>
       </label>
       <input

@@ -6,7 +6,7 @@ import Cvskills from "./Cvskills";
 function Cvsidebar({ photo, number, email, website, address, skills }) {
   return (
     <div id="cvSidebar">
-      <img src={photo}></img>
+      <img src={photo} alt={photo}></img>
       {number != "" ? (
         <Contacts heading="Phone" icon={mdiPhone} data={number} />
       ) : null}
