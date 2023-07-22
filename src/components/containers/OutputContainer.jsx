@@ -16,13 +16,21 @@ function OutputContainer(props) {
         <div id="mainCvContainer">
           {descriptionP != "" ? <Aboutme {...props} /> : null}
           <div id="cvExperienceContainer">
-            <h3>Work experience</h3>
+            {experience != "" && (
+              <>
+                <h3>Work experience</h3>
+              </>
+            )}
             {experience.map((obj) => (
               <Cvexperience experience={obj} key={obj.id} />
             ))}
           </div>
           <div id="cvEducationContainer">
-            <h3>Education</h3>
+            {education != "" && (
+              <>
+                <h3>Education</h3>
+              </>
+            )}
             {education.map((obj) => (
               <Cveducation education={obj} key={obj.id} />
             ))}
