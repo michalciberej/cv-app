@@ -67,6 +67,7 @@ function Experience({ experience, setExperience, id }) {
       <textarea
         type="text"
         placeholder="Job Descripion"
+        spellCheck="false"
         onChange={handleJobDescriptionInput}
       ></textarea>
       <button type="button" className="deleteBtn" onClick={handleBtnClick}>

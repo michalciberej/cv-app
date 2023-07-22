@@ -59,6 +59,8 @@
     font-size: 1rem;
     resize: none;
     transition: color 0.3s ease-in-out;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 

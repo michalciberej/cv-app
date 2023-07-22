@@ -20,7 +20,7 @@ function Main() {
   return (
     <div id="mainContainer">
       <div className="contentContainer">
-        <Header />
+        <Header photo={photo} />
       </div>
       <InputContainer
         setName={setName}
@@ -30,6 +30,7 @@ function Main() {
         setWebsite={setWebsite}
         setAddress={setAddress}
         setDescriptionP={setDescriptionP}
+        photo={photo}
         setPhoto={setPhoto}
         skills={skills}
         setSkills={setSkills}

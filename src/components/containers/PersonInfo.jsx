@@ -13,10 +13,6 @@ function PersonInfo({
   setAddress,
   setDescriptionP,
 }) {
-  const handleFileChange = (e) => {
-    if (e.target.file);
-  };
-
   return (
     <form method="#" action="#" id="personInfoContainer">
       <h2>Personal Information</h2>
@@ -65,6 +61,7 @@ function PersonInfo({
       <textarea
         type="text"
         placeholder="Description"
+        spellCheck="false"
         onChange={(e) => setDescriptionP(e.target.value)}
       ></textarea>
     </form>
